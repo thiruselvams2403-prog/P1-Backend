@@ -1,5 +1,4 @@
 import express from "express";
-import cors from "cors";
 import morgan from "morgan";
 import dotenv from "dotenv";
 import swaggerUi from "swagger-ui-express";
@@ -8,7 +7,12 @@ import noteRoutes from "./routes/note.routes.js";
 import connectDB from "../config/db.js";
 import fs from 'fs'; import path from 'path';
 import { fileURLToPath } from 'url';
+import cors from "cors";
 
+app.use(cors({
+  origin: "https://p1-front-end-xi.vercel.app", // allow your frontend
+  credentials: true // if you need cookies/auth headers
+}));
 
 dotenv.config();
 const app = express();
