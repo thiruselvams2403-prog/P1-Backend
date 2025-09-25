@@ -10,6 +10,8 @@
     "seed:roles": "node src/services/seedRoles.js",
     "test": "jest --runInBand"
   },
+  "author": "",
+ "license": "ISC",
   "dependencies": {
     "axios": "^1.7.7",
     "bcryptjs": "^2.4.3",
